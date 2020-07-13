@@ -16,7 +16,7 @@ This repository is divided into parts, each in its own folder. Inside, there are
 - Ulcerated
 - All (Healthy, non- and ulcerated combined).
 
-Notebooks for the healthy dataset are the default ones and that's where I will include the most descriptions and deliberations. The vast majority of analysis for the other datasets is analogous and so I'll spare myself writting the same things three times. I'm showing the code used for all the datasets for completion sake. Please always refer to the healthy dataset notebooks for a more detailed description of each step. 
+Notebooks for the healthy dataset are the default ones and that's where I will include the most descriptions and deliberations. The vast majority of analysis for the other datasets is analogous and so I'll spare myself writing the same things three times. I'm showing the code used for all the datasets for completion sake. Please always refer to the healthy dataset notebooks for a more detailed description of each step. 
 
 ### Future plans
-- Finish Part 0 and Part 1, establish template for notebook presentation and code organisation
+- Finish Part 0 and Part 1, establish template for notebook presentation and code organization
