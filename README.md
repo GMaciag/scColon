@@ -35,7 +35,7 @@ Part 5 is all about RNA velocity. After **VERY**, **VERY** long computation we a
 Finally, Part 6 contains all other code snippets that were used in the original study, but that did not fit into any other part of the guide. Here for example I show how to subset a dataset to only one cell type and reanalyze it (shown on the example of Tuft and EECs cells from the study). This part may be updated in the future if more ideas on how to evaluate the dataset come about. 
 
 ### Future plans
-- [x] Finish readme, introduction to the guide and organization of code
+- [x] <s>Finish readme, introduction to the guide and organization of code</s>
 - [ ] Finish Part 0, prerequisites to running the guide
 - [ ] Divide the healthy dataset notebook content into parts
 - [ ] Add descriptions and explanations to the code for healthy dataset
