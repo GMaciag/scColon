@@ -99,4 +99,4 @@ jupyter notebook password
  ```
  (GitHubTest) MacBook-Pro:~ user$
  ```
- Text in brackets `( )`  should be the name of the environment you created. It it says `(base)`, you need to first run `conda activate GitHubTest` and just then `jupyter lab`.
+ Text in brackets `( )`  should be the name of the environment you created. If it says `(base)`, you need to first run `conda activate GitHubTest` and just then `jupyter lab`.
