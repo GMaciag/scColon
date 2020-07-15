@@ -41,3 +41,4 @@ Finally, Part 6 contains all other code snippets that were used in the original 
 - [ ] Add descriptions and explanations to the code for healthy dataset
 - [ ] Add hyperlinks to parts description in README
 - [ ] Divide the rest of notebooks content into parts
+- [ ] Proofread the whole thing

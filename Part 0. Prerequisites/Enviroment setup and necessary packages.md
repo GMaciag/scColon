@@ -1,10 +1,10 @@
 # Trajectory and velocity analysis of scRNAseq COLON data 
 ## Part 0. Prerequisites
-### Which packages are necessary to run this repository and how to setup them up in a coding environment
+### Which packages are necessary to run this repository and how to setup them up in a programming environment
 
 #### Introduction
 
-The whole analysis in this repository is done in Python using just a few openly available packages. As long as you have the necessary libraries and data in correct format, you should be able to run this pipeline in whatever way you like. Below, I am showcasing how to set up a Jupyter Notebook running in a conda environment, since that's how it was done to get the results for the publication. 
+The whole analysis in this repository is done in Python using just a few openly available packages. As long as you have the necessary libraries and data in a correct format, you should be able to run this pipeline in whatever way you like. The section **Setting up the working environment** is for people who need to start from scratch, but don't have much experience with programming. Below, I am showcasing how to set up a Jupyter Notebook running in a conda environment, since that's how it was done to get the results for the publication. 
 
 #### Packages
 
@@ -12,7 +12,7 @@ In this guide I mostly make use of two (closely related) packages: [scanpy](http
 
 #### Setting up the working environment
 
-As mentioned above, my preferred way of working through this tutorial is with a use of [Jupyter Notebook](https://jupyter.org/). It is good practice to work in a separate environment, since installing new packages and dependencies can often break the previous ones. In which all you need to do is create a new environment. Much easier than reinstalling the system. A standard package manager is [conda](https://docs.conda.io/projects/conda/en/latest/index.html). 
+As mentioned above, my preferred way of working through this tutorial is with a use of [Jupyter Notebook](https://jupyter.org/) while working in a conda environment. It is good practice to work in a separate environment, since installing new packages and dependencies can often break the previous ones. A standard package manager is [conda](https://docs.conda.io/projects/conda/en/latest/index.html). 
 
 There are distributions of conda: Miniconda and Anaconda. Miniconda is a command line tool, while Anaconda gives you a graphical interface. Here, I will show how to install and configure an environment in Miniconda on macOS. For other installation options please refer to the [official documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html). 
 
@@ -27,13 +27,11 @@ Run the installer in a *silent mode*: automatically accept default settings
 ```
 bash ~/miniconda.sh -b -p $HOME/miniconda
 ```
-Default should be good enough, but if you prefer to set things up manually, then run the above line without the `-b` and `-p` options.
-
-The installer will prompt you: `Do you wish the installer to initialize Miniconda3 by running conda init?`. Enter `yes`.
+Default should be good enough, but if you prefer to set things up manually, then run the above line without the `-b` and `-p` options. The installer will prompt you: `Do you wish the installer to initialize Miniconda3 by running conda init?`. Enter `yes`.
 
 With conda installed, we can begin configuring the environment we will need for work. 
 
-Create the a new environment to work in (where `GitHubTest` is the name of your new environment)
+Create a new environment to work in (where `GitHubTest` is the name of your new environment)
 ```
 conda create -n GitHubTest python=3.6
 ```
@@ -46,9 +44,59 @@ conda activate GitHubTest
 Install Scanpy's dependencies
 ```
 conda install seaborn scikit-learn statsmodels numba pytables
-conda install -c conda-forge python-igraph leiden
+conda install -c conda-forge python-igraph leidenalg
 ```
 Install `scanpy`
 ```
-pip install scanpy
+pip3 install scanpy
 ```
+Install `scVelo`
+```
+pip3 install -U scvelo
+```
+Install `DoubletDetection`
+```
+git clone https://github.com/JonathanShor/DoubletDetection.git
+cd DoubletDetection
+pip3 install .
+```
+Install `scrublet`
+```
+pip3 install scrublet
+```
+Depending on your on OS and configuration this step may fail. It does for me, running on macOS Mojave. The issue for me was installation of the `annoy` package which failed because of incompatible C++ compiler. In this case run first
+```
+conda install -c akode annoy
+```
+before running the `scrublet` command. It should work now. 
+
+Now we install `JupyterLab`. It's a web-based interactive development environment using Jupyter notebook as a base, but with lots of useful additions, either build-in or available as plugins.
+```
+conda install -c conda-forge jupyterlab
+```
+Before we begin, it's better to create a new directory in which you will run your jupyter notebook (and as such, the whole pipeline). That way you can keep all your files (both data and plots) organized. 
+```
+mkdir ~/GitHubTest
+cd ~/GitHubTest/
+```
+Finally, the last thing left to do is actually run the notebook and start coding!
+```
+jupyter lab
+```
+Jupyter Lab should automatically open up in your default browser. If it does not (or you close the page), look through the output in the terminal for lines
+```
+[I 11:41:26.211 LabApp] The Jupyter Notebook is running at:
+[I 11:41:26.211 LabApp] http://localhost:8890/
+```
+In this case it means you have to navigate to the the address `http://localhost:8890/` in your web browser. 
+
+ **NB.** When you open a jupyter notebook for the first time, it will ask you to set a password. You will later need that password to login in the browser. Better note it down, but if you ever forget it, you can set a new one with
+ ```
+jupyter notebook password
+ ```
+
+ **NB. II** Remember that whenever you will want to run the pipeline, you need to start the Jupyter Lab within the conda environment we created before. You can know where you are by checking the command line prompt:
+ ```
+ (GitHubTest) MacBook-Pro:~ user$
+ ```
+ Text in brackets `( )`  should be the name of the environment you created. It it says `(base)`, you need to first run `conda activate GitHubTest` and just then `jupyter lab`.
