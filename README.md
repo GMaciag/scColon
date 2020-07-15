@@ -1,11 +1,11 @@
 # Trajectory and velocity analysis of scRNAseq COLON data 
-## jupyter notebooks for study "Widespread epithelial dedifferentiation in patients with ulcerative colitis"
+## Guide for scRNAseq trajectory and velocity analysis complementary to the study "Widespread epithelial dedifferentiation in patients with ulcerative colitis"
 
 ### Introduction
 
 This is part of a series of notebooks guiding you through of a full process of single cell data analysis. Starting with raw sequencing files we end up with differentiation trajectories and velocity plots. Along the way, we pay special attention to all the parameter choices and descriptions of results, so hopefully one can easily follow and replicate this analysis on their own data. 
 
-At the same time, those notebooks present, in full extent, the computations done for the study **"Widespread epithelial dedifferentiation in patients with ulcerative colitis"**, published *[manuscript in review]*. The data used for the notebooks come from that study and can be freely accessed online at *[in preparation]*.    
+At the same time, those notebooks present, in full extent, the computations done for the study **"Widespread epithelial dedifferentiation in patients with ulcerative colitis"**, published in *[manuscript in review]*. The data used for the notebooks come from that study and can be freely accessed online at *[in preparation]*.    
 
 ### Content description
 
@@ -20,25 +20,27 @@ Notebooks for the healthy dataset are the default ones and that's where I includ
 
 ### Content list
 
-Part 0 describes what is first required, in terms of data and software, in order to run the rest of the tutorial. Here I show how you need to preprocess your raw sequencing data so that you can get nice RNA velocity plots in the end. I also explain how you should set up programming environment on your computer and which packages will you need.  
+**Part 0** describes what is first required, in terms of data and software, in order to run the rest of the tutorial. Here I show how you need to preprocess your raw sequencing data so that you can get nice RNA velocity plots in the end. I also explain how you should set up programming environment on your computer and which packages will you need.  
 
-In Part 1 we first load the data from the `.loom` files and then go through a throughout quality control of the datasets. We filter the cells as well as the genes and concatenate the samples to be ready for the next step.
+In **Part 1** we first load the data from the `.loom` files and then go through a throughout quality control of the datasets. We filter the cells as well as the genes and concatenate the samples to be ready for the next step.
 
-Part 2 covers the normalization, regression and batch correction, which are all necessary to align the samples together and make them comparable. In this step we also calculate the proliferation and cell cycle scores. The batch correction method included in this part takes **VERY** long time and can easily run for hours on a bigger dataset. Beware and plan running your pipeline accordingly.
+**Part 2** covers the normalization, regression and batch correction, which are all necessary to align the samples together and make them comparable. In this step we also calculate the proliferation and cell cycle scores. The batch correction method included in this part takes VERY long time and can easily run for hours on a bigger dataset. Beware and plan running your pipeline accordingly.
 
-Part 3 is where we perform dimensionality reduction, including PCA and UMAP. PCA let's us inspect where most of the variation Here we also have the opportunity to make first diagnostic plots, checking the quality of sample alignment and distribution of know marker genes. 
+**Part 3** is where we perform dimensionality reduction, including PCA and UMAP. PCA let's us inspect where most of the variation Here we also have the opportunity to make first diagnostic plots, checking the quality of sample alignment and distribution of know marker genes. 
 
-In Part 4 we use the results of differential expression and our knowledge of known marker genes to divide the cells into informative clusters. We also explore differentiation trajectories.
+In **Part 4** we use the results of differential expression and our knowledge of known marker genes to divide the cells into informative clusters. We also explore differentiation trajectories.
 
-Part 5 is all about RNA velocity. After **VERY**, **VERY** long computation we are able to present the velocity on previously created embeddings (PCA, UMAP). Calculation of velocity gives us also access to the measurement of latent time, an unbiased alternative to pseudo time. 
+**Part 5** is all about RNA velocity. After VERY, VERY long computation we are able to present the velocity on previously created embeddings (PCA, UMAP). Calculation of velocity gives us also access to the measurement of latent time, an unbiased alternative to pseudo time. 
 
-Finally, Part 6 contains all other code snippets that were used in the original study, but that did not fit into any other part of the guide. Here for example I show how to subset a dataset to only one cell type and reanalyze it (shown on the example of Tuft and EECs cells from the study). This part may be updated in the future if more ideas on how to evaluate the dataset come about. 
+Finally, **Part 6** contains all other code snippets that were used in the original study, but that did not fit into any other part of the guide. Here for example I show how to subset a dataset to only one cell type and reanalyze it (shown on the example of Tuft and EECs cells from the study). This part may be updated in the future if more ideas on how to evaluate the dataset come about. 
 
-### Future plans
-- [x] <s>Finish readme, introduction to the guide and organization of code</s>
-- [ ] Finish Part 0, prerequisites to running the guide
+## TO DO
 - [ ] Divide the healthy dataset notebook content into parts
 - [ ] Add descriptions and explanations to the code for healthy dataset
 - [ ] Add hyperlinks to parts description in README
 - [ ] Divide the rest of notebooks content into parts
 - [ ] Proofread the whole thing
+
+## DONE
+- [x] Finish readme, introduction to the guide and organization of code
+- [x] Finish Part 0, prerequisites to running the guide
