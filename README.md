@@ -16,7 +16,9 @@ This repository is divided into parts, each in its own folder. Inside, there are
 - Ulcerated
 - All (Healthy, non- and ulcerated combined).
 
-Notebooks for the healthy dataset are the default ones and that's where I include the most descriptions and deliberations. The vast majority of analysis for the other datasets is analogous and so I spare myself writing the same things three times. I'm showing the code used for all the datasets for completion sake. Please always refer to the healthy dataset notebooks for a more detailed description of each step. 
+Notebooks for the healthy dataset are the default ones and that's where I include the most descriptions and deliberations. The vast majority of analysis for the other datasets is analogous and so I spare myself writing the same things multiple times. I'm showing the code used for all the datasets for completion sake. Please always refer to the healthy dataset notebooks for a more detailed description of each step. 
+
+This guide assumes that you have data from multiple samples which you want to group together into conditions (for example *treated* and *untreated*). If you are working only on a single sample (or prefer to analyse everything separately), then there are some steps you will have to omit (especially in **Part 2**). 
 
 ### Content list
 
@@ -40,6 +42,7 @@ Finally, **Part 6** contains all other code snippets that were used in the origi
 - [ ] Add hyperlinks to parts description in README
 - [ ] Divide the rest of notebooks content into parts
 - [ ] Proofread the whole thing
+- [ ] Turn into github.io page
 
 ## DONE
 - [x] Finish readme, introduction to the guide and organization of code

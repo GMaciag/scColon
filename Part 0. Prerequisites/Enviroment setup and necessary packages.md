@@ -70,9 +70,9 @@ conda install -c akode annoy
 ```
 before running the `scrublet` command. It should work now. 
 
-Now we install `JupyterLab`. It's a web-based interactive development environment using Jupyter notebook as a base, but with lots of useful additions, either build-in or available as plugins.
+Now we install `Jupyter Notebook`. It's a web-based interactive development environment .
 ```
-conda install -c conda-forge jupyterlab
+conda install -c conda-forge notebook
 ```
 Before we begin, it's better to create a new directory in which you will run your jupyter notebook (and as such, the whole pipeline). That way you can keep all your files (both data and plots) organized. 
 ```
@@ -81,22 +81,22 @@ cd ~/GitHubTest/
 ```
 Finally, the last thing left to do is actually run the notebook and start coding!
 ```
-jupyter lab
+jupyter notebook
 ```
-Jupyter Lab should automatically open up in your default browser. If it does not (or you close the page), look through the output in the terminal for lines
+Jupyter Notebook should automatically open up in your default browser. If it does not (or you close the page), look through the output in the terminal for lines
 ```
-[I 11:41:26.211 LabApp] The Jupyter Notebook is running at:
-[I 11:41:26.211 LabApp] http://localhost:8890/
+[I 11:41:26.211 NotebookApp] The Jupyter Notebook is running at:
+[I 11:41:26.211 NotebookApp] http://localhost:8888/
 ```
-In this case it means you have to navigate to the the address `http://localhost:8890/` in your web browser. 
+In this case it means you have to navigate to the the address `http://localhost:8888/` in your web browser. 
 
  **NB.** When you open a jupyter notebook for the first time, it will ask you to set a password. You will later need that password to login in the browser. Better note it down, but if you ever forget it, you can set a new one with
  ```
 jupyter notebook password
  ```
 
- **NB. II** Remember that whenever you will want to run the pipeline, you need to start the Jupyter Lab within the conda environment we created before. You can know where you are by checking the command line prompt:
+ **NB. II** Remember that whenever you will want to run the pipeline, you need to start the Notebook within the conda environment we created before. You can know where you are by checking the command line prompt:
  ```
  (GitHubTest) MacBook-Pro:~ user$
  ```
- Text in brackets `( )`  should be the name of the environment you created. If it says `(base)`, you need to first run `conda activate GitHubTest` and just then `jupyter lab`.
+ Text in brackets `( )`  should be the name of the environment you created. If it says `(base)`, you need to first run `conda activate GitHubTest` and just then `jupyter notebook`.
