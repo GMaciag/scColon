@@ -34,7 +34,9 @@ In **Part 4** we use the results of differential expression and our knowledge of
 
 **Part 5** is all about RNA velocity. After VERY, VERY long computation we are able to present the velocity on previously created embeddings (PCA, UMAP). Calculation of velocity gives us also access to the measurement of latent time, an unbiased alternative to pseudo time. 
 
-Finally, **Part 6** contains all other code snippets that were used in the original study, but that did not fit into any other part of the guide. Here for example I show how to subset a dataset to only one cell type and reanalyze it (shown on the example of Tuft and EECs cells from the study). This part may be updated in the future if more ideas on how to evaluate the dataset come about. 
+Finally, **Part 6** contains all other code snippets that were used in the original study, but that did not fit into any other part of the guide. Here for example I show how to subset a dataset to only one cell type and reanalyze it (shown on the example of Tuft and EECs cells from the study). This part may be updated in the future if more ideas on how to evaluate the dataset come about.
+
+**NB!** This guide by no means exhausts the topic. You may have many questions and issues which I have not touched upon or did not explain well enough. It will be beneficial for your understanding if you look for additional sources of information about this type of analysis. I can highly recommend the [best practices in scRNAseq tutorial](https://www.embopress.org/doi/10.15252/msb.20188746) by Fabian Theis.  
 
 ## TO DO
 - [ ] Divide the healthy dataset notebook content into parts
