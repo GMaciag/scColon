@@ -1,4 +1,4 @@
-# Trajectory and velocity analysis of scRNAseq COLON data 
+# Trajectory and velocity analysis of scRNAseq data 
 ## Guide for scRNAseq trajectory and velocity analysis complementary to the study "Widespread epithelial dedifferentiation in patients with ulcerative colitis"
 
 ### Introduction
