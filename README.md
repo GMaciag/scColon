@@ -50,3 +50,4 @@ Finally, **Part 6** contains all other code snippets that were used in the origi
 - [x] Finish readme, introduction to the guide and organization of code
 - [x] Finish Part 0, prerequisites to running the guide
 - [x] Finish Part 1, QC, for all conditions
+- [x] Finish Part 2, normalisation, for all conditions
