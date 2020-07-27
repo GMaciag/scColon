@@ -51,3 +51,4 @@ Finally, **Part 6** contains all other code snippets that were used in the origi
 - [x] Finish Part 0, prerequisites to running the guide
 - [x] Finish Part 1, QC, for all conditions
 - [x] Finish Part 2, normalisation, for all conditions
+- [x] Finish Part 3, dimensionality reduction, for all conditions
