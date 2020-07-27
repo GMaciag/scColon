@@ -8,7 +8,7 @@ The whole analysis in this repository is done in Python using just a few openly 
 
 #### Packages
 
-In this guide I mostly make use of two (closely related) packages: [scanpy](https://scanpy.readthedocs.io/en/stable/) and [scVelo](https://scvelo.readthedocs.io/). Those two will install as dependencies many other packages, like numpy, pandas, or seaborn, some of which we will also use explicitly along the way. We will also need [mnnpy](https://github.com/chriscainx/mnnpy) for batch correction, which we need to install separately. Apart from that, we will need two tools for doublet detection, [Scrublet](https://github.com/AllonKleinLab/scrublet) and [DoubletDetection](https://github.com/JonathanShor/DoubletDetection). 
+In this guide I mostly make use of two (closely related) packages: [scanpy](https://scanpy.readthedocs.io/en/stable/) and [scVelo](https://scvelo.readthedocs.io/). Those two will install as dependencies many other packages, like numpy, pandas, or seaborn, some of which we will also use explicitly along the way. We will also need [mnnpy](https://github.com/chriscainx/mnnpy) and [bbknn](https://github.com/Teichlab/bbknn) for batch correction, which we need to install separately. Apart from that, we will need two tools for doublet detection, [Scrublet](https://github.com/AllonKleinLab/scrublet) and [DoubletDetection](https://github.com/JonathanShor/DoubletDetection). 
 
 #### Setting up the working environment
 
@@ -73,6 +73,11 @@ before running the `scrublet` command. It should work now.
 Install `mnnpy` for batch correction with the MNNs algorithm
 ```
 pip3 install mnnpy
+```
+
+Install `bbknn` for batch correction with the bbknn algorithm
+```
+pip3 install bbknn
 ```
 
 Now we install `Jupyter Notebook`. It's a web-based interactive development environment .
