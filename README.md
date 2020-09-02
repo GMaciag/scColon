@@ -3,6 +3,10 @@
 
 ### Introduction
 
+___
+**NB!** For some reason GitHub may have problems with rendering some of the notebooks (only at times, similar to the issue reported [here](https://github.com/jupyter/notebook/issues/3035)). If this happens, please open the notebook URL in https://nbviewer.jupyter.org/
+___
+
 This is part of a series of notebooks guiding you through of a full process of single cell data analysis. Starting with raw sequencing files we end up with differentiation trajectories and velocity plots. Along the way, we pay special attention to all the parameter choices and descriptions of results, so hopefully one can easily follow and replicate this analysis on their own data. 
 
 At the same time, those notebooks present, in full extent, the computations done for the study **"Widespread epithelial dedifferentiation in patients with ulcerative colitis"**, published in *[manuscript in review]*. The data used for the notebooks come from that study and can be freely accessed online at *[in preparation]*.    
