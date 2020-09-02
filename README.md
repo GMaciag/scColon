@@ -30,13 +30,13 @@ This guide assumes that you have data from multiple samples which you want to gr
 
 In **Part 1** we first load the data from the `.loom` files and then go through a throughout quality control of the datasets. We filter the cells as well as the genes and concatenate the samples to be ready for the next step.
 
-**Part 2** covers the normalization, regression and batch correction, which are all necessary to align the samples together and make them comparable. In this step we also calculate the proliferation and cell cycle scores. The batch correction method included in this part takes VERY long time and can easily run for hours on a bigger dataset. Beware and plan running your pipeline accordingly.
+**Part 2** covers the normalization, regression and batch correction, which are all necessary to align the samples together and make them comparable. In this step we also calculate the proliferation and cell cycle scores. The batch correction method included in this part takes very long time and can easily run for hours on a bigger dataset. Beware and plan running your pipeline accordingly.
 
 **Part 3** is where we perform dimensionality reduction, including PCA and UMAP. PCA let's us inspect where most of the variation Here we also have the opportunity to make first diagnostic plots, checking the quality of sample alignment and distribution of know marker genes. 
 
 In **Part 4** we use the results of differential expression and our knowledge of known marker genes to divide the cells into informative clusters. We also explore differentiation trajectories.
 
-**Part 5** is all about RNA velocity. After VERY, VERY long computation we are able to present the velocity on previously created embeddings (PCA, UMAP). Calculation of velocity gives us also access to the measurement of latent time, an unbiased alternative to pseudo time. 
+**Part 5** is all about RNA velocity. After another long computation we are able to present the velocity on previously created embeddings (PCA, UMAP). Calculation of velocity gives us also access to the measurement of latent time, an unbiased alternative to pseudo time. 
 
 **(((TBD)))** Finally, **Part 6** contains all other code snippets that were used in the original study, but that did not fit into any other part of the guide. Here for example I show how to subset a dataset to only one cell type and reanalyze it (shown on the example of Tuft and EECs cells from the study). This part may be updated in the future if more ideas on how to evaluate the dataset come about.
 
