@@ -74,6 +74,11 @@ Install `mnnpy` for batch correction with the MNNs algorithm
 ```
 pip3 install mnnpy
 ```
+Again, on macOS this step may fail. If the error is something like: `unable to execute '/usr/local/Cellar/gcc/9.2.0_1/bin/gcc-9': No such file or directory`, then the solution is to run first
+```
+export CC=/usr/local/Cellar/gcc/X.X.X/bin/gcc-X
+```
+where you should replace the 'X's with the version number you find on your machine. 
 
 Install `bbknn` for batch correction with the bbknn algorithm
 ```
