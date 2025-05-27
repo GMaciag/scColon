@@ -1,5 +1,5 @@
 # Trajectory and velocity analysis of scRNAseq data 
-## Guide for scRNAseq trajectory and velocity analysis complementary to the study "Widespread epithelial dedifferentiation in patients with ulcerative colitis"
+## Guide for scRNAseq trajectory and velocity analysis complementary to the study "JAK/STAT signaling promotes the emergence of unique cell states in ulcerative colitis"
 
 ### Introduction
 
@@ -9,7 +9,7 @@ ___
 
 This is part of a series of notebooks guiding you through of a full process of single cell data analysis. Starting with raw sequencing files we end up with differentiation trajectories and velocity plots. Along the way, we pay special attention to all the parameter choices and descriptions of results, so hopefully one can easily follow and replicate this analysis on their own data. 
 
-At the same time, those notebooks present, in full extent, the computations done for the study **"Widespread epithelial dedifferentiation in patients with ulcerative colitis"**, published in *[manuscript in review]*. The data used for the notebooks come from that study and can be freely accessed online at *[in preparation]*.    
+At the same time, those notebooks present, in full extent, the computations done for the study **"JAK/STAT signaling promotes the emergence of unique cell states in ulcerative colitis"**, published in *Stem Cell Reports* ([link](https://doi.org/10.1016/j.stemcr.2024.06.006)). The scRNA-seq data used for these notebooks have been deposited at the European Genome-phenome Archive (EGA) repository and are publicly available under the accession number EGAS00001007098.    
 
 ### Content description
 
